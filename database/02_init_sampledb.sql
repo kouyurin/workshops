@@ -43,3 +43,19 @@ insert into user values (5, '木原大輔', 41, 'AB', 'sample5@sample5.com');
 -- insert into user values ('大山洋次郎', 38, 'B', 'sample6@sample6.com');
 
 -- source add_tables_samples.sql
+
+drop table if exists items;
+create table item (
+	id int unsigned not null auto_increment, 
+	name varchar(50) not null, 
+	price int unsigned,
+	primary key (id)
+) engine=InnoDB default charset=utf8;
+
+insert into item (name, price) values ('アップライトピアノ', 600000); 
+insert into item (name, price) values ('電子ピアノ', 220000); 
+insert into item (name, price) values ('ローズピアノ', 280000); 
+insert into item (name, price) values ('エレキギター', 80000); 
+insert into item (name, price) values ('アコースティックギター', 200000); 
+insert into item (name, price) values ('エレキベース', 120000); 
+insert into item (name, price) values ('アップライトベース', 420000);
