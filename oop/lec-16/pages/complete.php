@@ -116,6 +116,9 @@ if ($action === "signup") {
 	}
 	$title = "ID{$user->getId()}のユーザの削除";
 }
+// 2-4. セッションの削除
+unset($_SESSION["user"]);
+unset($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="ja">
